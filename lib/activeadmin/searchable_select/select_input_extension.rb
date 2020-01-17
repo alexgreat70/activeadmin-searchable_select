@@ -71,12 +71,11 @@ module ActiveAdmin
       end
 
       def option_for_record(record)
-        puts "attribute_select: #{record[attribute_select]}"
+        binding.pry
         [option_collection.display_text(record), record[attribute_select]]
       end
 
       def selected_records
-        puts "SELECTED_VALUES: #{selected_values}"
         @selected_records ||= if selected_values
           option_collection_scope.where("#{attribute_select}": selected_values)
         else
