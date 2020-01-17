@@ -71,7 +71,6 @@ module ActiveAdmin
       end
 
       def option_for_record(record)
-        binding.pry
         [option_collection.display_text(record), record[attribute_select]]
       end
 
