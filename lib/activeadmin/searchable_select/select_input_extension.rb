@@ -69,6 +69,7 @@ module ActiveAdmin
       end
 
       def selected_records
+        puts "SELECTED_VALUES: #{selected_values}"
         @selected_records ||= if selected_values
           option_collection_scope.where("#{attribute_select}": selected_values)
         else
