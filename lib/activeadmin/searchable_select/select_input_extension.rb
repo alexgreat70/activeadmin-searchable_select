@@ -71,7 +71,7 @@ module ActiveAdmin
       end
 
       def option_for_record(record)
-        [option_collection.display_text(record), record[attribute_select]]
+        [option_collection.display_text(record), record.id]
       end
 
       def selected_records
